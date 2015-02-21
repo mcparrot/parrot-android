@@ -18,5 +18,5 @@
         android:textColor="#454545"
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true" />
-
+    <!--Storing milk in bags is still really weird-->
 </RelativeLayout>
