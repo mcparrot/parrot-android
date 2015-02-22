@@ -15,7 +15,6 @@
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -23,11 +22,13 @@
         <!--Main Activity-->
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="pocketapp38321" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="https" android:host="getpocket.com" android:path="/auth/pocketapp38330"/> <!-- pocketapp38330-->
             </intent-filter>
         </activity>
     </application>

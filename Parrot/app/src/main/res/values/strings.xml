@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Parrot</string>
-    <string name="hello_world">TEST RUN</string>
+    <string name="hello_world">HELLO WORLD</string>
     <string name="action_settings">Settings</string>
 
 </resources>

@@ -8,8 +8,10 @@
         android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:src="@drawable/loader" />
+        android:src="@drawable/loading"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp" />
 
     <!--Storing milk in bags is still really weird-->
 </RelativeLayout>
