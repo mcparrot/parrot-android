@@ -3,6 +3,7 @@ package com.devchuk.root.parrot;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -57,6 +58,7 @@ public class Library extends Activity {
                 // Execute HTTP Post Request
                 HttpResponse response = httpclient.execute(httppost);
                 respon = EntityUtils.toString(response.getEntity());
+
                 return respon;
             } catch (ClientProtocolException e) {
                 // TODO Auto-generated catch block
@@ -70,6 +72,7 @@ public class Library extends Activity {
             TextView t = (TextView) findViewById(R.id.token); //just for testing
             ArrayList<String> values = new ArrayList<String>();
             ArrayList<String> descriptions = new ArrayList<String>();
+            ListView listView;
             try {
                 JSONObject jObject = new JSONObject(respon);
                 JSONArray jArray = jObject.getJSONObject("list").names();
@@ -81,6 +84,12 @@ public class Library extends Activity {
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
+            }
+
+            listView = (ListView) findViewById(R.id.list);
+            String[] titles = new String[values.size()];
+            for (int i = 0; i < values.size(); i++) {
+                titles[i] = values.get(i);
             }
 
             t.setText(respon);
