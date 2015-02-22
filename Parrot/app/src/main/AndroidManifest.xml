@@ -23,16 +23,24 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <!--Library Activity-->
+        <activity
+            android:name=".Library"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="https" android:host="getpocket.com" android:path="/auth/pocketapp38330"/> <!-- pocketapp38330-->
+                <!--<data android:scheme="https" android:host="getpocket.com" android:path="/auth/pocketapp38330"/> &lt;!&ndash; pocketapp38330&ndash;&gt;-->
             </intent-filter>
         </activity>
-        <!--Library Activity-->
-        
     </application>
 
 </manifest>
