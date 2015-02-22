@@ -31,6 +31,8 @@
                 <data android:scheme="https" android:host="getpocket.com" android:path="/auth/pocketapp38330"/> <!-- pocketapp38330-->
             </intent-filter>
         </activity>
+        <!--Library Activity-->
+        
     </application>
 
 </manifest>
